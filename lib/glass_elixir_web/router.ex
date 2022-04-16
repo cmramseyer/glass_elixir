@@ -18,7 +18,8 @@ defmodule GlassElixirWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :index
-    get "/products", ProductController, :index
+    resources "/stages", StageController
+    resources "/products", ProductController
   end
 
   # Other scopes may use custom stacks.

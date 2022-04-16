@@ -1,0 +1,18 @@
+<h1>Show Stage</h1>
+
+<ul>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @stage.name %>
+  </li>
+
+  <li>
+    <strong>Workload:</strong>
+    <%= @stage.workload %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: Routes.stage_path(@conn, :edit, @stage) %></span> |
+<span><%= link "Back", to: Routes.stage_path(@conn, :index) %></span>

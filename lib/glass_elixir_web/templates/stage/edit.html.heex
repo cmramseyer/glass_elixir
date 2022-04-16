@@ -1,0 +1,5 @@
+<h1>Edit Stage</h1>
+
+<%= render "form.html", Map.put(assigns, :action, Routes.stage_path(@conn, :update, @stage)) %>
+
+<span><%= link "Back", to: Routes.stage_path(@conn, :index) %></span>

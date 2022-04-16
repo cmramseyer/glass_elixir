@@ -1,0 +1,28 @@
+<h1>Listing Stages</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Workload</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for stage <- @stages do %>
+    <tr>
+      <td><%= stage.name %></td>
+      <td><%= stage.workload %></td>
+
+      <td>
+        <span><%= link "Show", to: Routes.stage_path(@conn, :show, stage) %></span>
+        <span><%= link "Edit", to: Routes.stage_path(@conn, :edit, stage) %></span>
+        <span><%= link "Delete", to: Routes.stage_path(@conn, :delete, stage), method: :delete, data: [confirm: "Are you sure?"] %></span>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<span><%= link "New Stage", to: Routes.stage_path(@conn, :new) %></span>
